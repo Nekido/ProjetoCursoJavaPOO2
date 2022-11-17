@@ -4,7 +4,7 @@ public class AntiInflamatorios extends Medicamentos{
 
   private boolean indicacaoDor;
 
-  public AntiInflamatorios(String nome, String validade,
+  public AntiInflamatorios(String nome, int validade,
                            Integer quantidade, String laboratorio, boolean indicacaoDor) {
     super(nome, validade, quantidade, laboratorio);
     this.indicacaoDor = indicacaoDor;

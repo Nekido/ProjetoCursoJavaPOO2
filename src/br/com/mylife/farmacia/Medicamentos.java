@@ -1,25 +1,26 @@
 package br.com.mylife.farmacia;
 
-import java.util.ArrayList;
+import java.util.Date;
 
 public class Medicamentos {
 
     private String nome;
-    private String validade;
+    private int validade;
+
     private Integer quantidade;
     private String laboratorio;
 
 
 
 
-    public Medicamentos(String nome, String validade,  Integer quantidade, String laboratorio) {
+    public Medicamentos(String nome, int validade,  Integer quantidade, String laboratorio) {
         this.nome = nome;
         this.validade = validade;
         this.quantidade = quantidade;
         this.laboratorio = laboratorio;
     }
 
-
+//QUERO QUE O PROGRAMA SOME OS MEDICAMENTS INDIVIDUALMENTE E NA TOTALIDADE
 
     public String getNome() {
         return nome;
@@ -29,11 +30,11 @@ public class Medicamentos {
         this.nome = nome;
     }
 
-    public String getValidade() {
+    public int getValidade() {
         return validade;
     }
 
-    public void setValidade(String validade) {
+    public void setValidade(int validade) {
         this.validade = validade;
     }
 

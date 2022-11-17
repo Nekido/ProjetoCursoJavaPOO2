@@ -4,7 +4,7 @@ public class Antitermicos extends Medicamentos{
 
     private boolean indicacaoFebre;
 
-    public Antitermicos(String nome, String validade, Integer quantidade,
+    public Antitermicos(String nome, int validade, Integer quantidade,
                         String laboratorio, boolean indicacaoFebre) {
         super(nome, validade, quantidade, laboratorio);
         this.indicacaoFebre = indicacaoFebre;
