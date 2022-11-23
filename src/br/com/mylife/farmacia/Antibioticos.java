@@ -1,31 +1,28 @@
 package br.com.mylife.farmacia;
 
-import java.util.Date;
+public class Antibioticos extends Medicamento {
 
-public class Antibioticos extends Medicamentos {
+    private boolean injetavel;
 
-    private boolean indicacaoVirose;
-    private String aplicacao;
-
-    public Antibioticos(String nome, int validade, Integer quantidade,
-                        String laboratorio, boolean indicacaoVirose) {
-        super(nome, validade,quantidade, laboratorio);
-        this.indicacaoVirose = indicacaoVirose;
+    public Antibioticos(String nome, String validade, TipoRemedioEnum tipo, String indicacao, Integer quantidade, String laboratorio, boolean injetavel) {
+        super(nome, validade, tipo, indicacao, quantidade, laboratorio);
+        this.injetavel = injetavel;
     }
 
-    public boolean isIndicacaoVirose() {
-        return indicacaoVirose;
+    public boolean isInjetavel() {
+        return injetavel;
     }
 
-    public void setIndicacaoVirose(boolean indicacaoVirose) {
-        this.indicacaoVirose = indicacaoVirose;
+    public void setInjetavel(boolean injetavel) {
+        this.injetavel = injetavel;
     }
 
     @Override
     public String toString() {
-        return "Antibioticos{" +
-                "indicacaoVirose=" + indicacaoVirose +
-                super.toString();
-
+        return super.toString() +"Antibioticos{" +
+                "injetavel=" + injetavel +
+                '}';
     }
+
+
 }

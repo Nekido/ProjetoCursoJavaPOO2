@@ -1,26 +1,27 @@
 package br.com.mylife.farmacia;
 
-import java.util.Date;
-
-public class Medicamentos {
+public class Medicamento {
 
     private String nome;
-    private int validade;
-
+    private String validade;
+    private TipoRemedioEnum tipo;
+    private String indicacao;
     private Integer quantidade;
     private String laboratorio;
 
 
 
-
-    public Medicamentos(String nome, int validade,  Integer quantidade, String laboratorio) {
+    public Medicamento(String nome, String validade, TipoRemedioEnum tipo, String indicacao, Integer quantidade, String laboratorio) {
         this.nome = nome;
         this.validade = validade;
+        this.tipo= tipo;
+        this.indicacao = indicacao;
         this.quantidade = quantidade;
         this.laboratorio = laboratorio;
     }
 
-//QUERO QUE O PROGRAMA SOME OS MEDICAMENTS INDIVIDUALMENTE E NA TOTALIDADE
+
+
 
     public String getNome() {
         return nome;
@@ -30,16 +31,24 @@ public class Medicamentos {
         this.nome = nome;
     }
 
-    public int getValidade() {
+    public String getValidade() {
         return validade;
     }
 
-    public void setValidade(int validade) {
+    public void setValidade(String validade) {
         this.validade = validade;
     }
 
 
-    public int getQuantidade() {
+    public TipoRemedioEnum getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoRemedioEnum tipo) {
+        this.tipo = tipo;
+    }
+
+    public int getQuantidade(TipoRemedioEnum analgesico) {
         return quantidade;
     }
 
@@ -58,9 +67,11 @@ public class Medicamentos {
     public String toString() {
         return "Medicamentos{" +
                 "nome='" + nome + '\'' +
-                ", validade='" + validade + '\'' +
+                ", validade=" + validade +
+                ", tipo=" + tipo +
+                ", indicacao='" + indicacao + '\'' +
                 ", quantidade=" + quantidade +
-                ", laboratorio=" + laboratorio +
+                ", laboratorio='" + laboratorio + '\'' +
                 '}';
     }
 }
