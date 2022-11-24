@@ -13,12 +13,11 @@ public class Antibioticos extends Medicamento implements Aplicacao{
 
     @Override
     public String toString() {
-        return super.toString() +"Antibioticos{"+
-                '}';
+        return super.toString();
     }
 
     @Override
     public void aplicacao() {
-        System.out.println("Este medicamento é Injetável");
+        System.out.println("Antiiótico: Este medicamento é Injetável");
     }
 }

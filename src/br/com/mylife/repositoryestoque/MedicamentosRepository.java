@@ -18,6 +18,7 @@ public class MedicamentosRepository {
   public void cadastrarRemedio() {
 
       List<Medicamento> medRepository = new ArrayList<>();
+
       medRepository.add(new Medicamento("Sem Dodoi", "25 / 5 / 2026", ANTITERMICO,
               "Febre", 30, "Biolab"));
       medRepository.add(new Medicamento("Analgin", "20 / 2 / 2030", ANTIINFLAMATORIO,
@@ -25,15 +26,27 @@ public class MedicamentosRepository {
       medRepository.add(new Medicamento("Antibin", "3 / 9 / 2023", ANTIBIOTICO,
               "Virose", 20, "Zetex"));
       medRepository.add(new Medicamento("Sedilax", "30 / 8 / 2029", ANTIINFLAMATORIO, "Dor", 120, "Iflab"));
-      System.out.println(medRepository);
+
+      System.out.println("\nItens cadastrados:\n" + medRepository.size());
 
 
-      Integer soma = 0;
-      for (Medicamento medicamentos : medRepository) {
-          soma += medicamentos.getQuantidade();
+          Integer soma = 0;
+          for (Medicamento medicamentos : medRepository) {
+              soma += medicamentos.getQuantidade();
+              System.out.println(medicamentos);
 
-        } System.out.println("Total de medicamentos em estoque:" + soma);
+
+          }
+          System.out.println("\nTotal de medicamentos em estoque:\n" + soma);
+
+      }
+
+
 
 
   }
-}
+
+
+
+
+

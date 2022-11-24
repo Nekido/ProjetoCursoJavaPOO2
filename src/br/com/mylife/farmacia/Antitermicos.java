@@ -14,12 +14,11 @@ public class Antitermicos extends Medicamento implements Aplicacao{
 
     @Override
     public String toString() {
-        return super.toString()+"Antitermicos{" +
-                '}';
+        return super.toString();
     }
 
     @Override
     public void aplicacao() {
-        System.out.println("Este medicamento é em Gotas");
+        System.out.println("Antitérmico: Este medicamento é em Gotas");
     }
 }

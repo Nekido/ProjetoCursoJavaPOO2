@@ -13,8 +13,7 @@ public class AntiInflamatorios extends Medicamento implements Aplicacao{
 
   @Override
   public String toString() {
-    return super.toString() +"AntiInflamatorios{" +
-            '}';
+    return super.toString();
   }
 
   @Override
