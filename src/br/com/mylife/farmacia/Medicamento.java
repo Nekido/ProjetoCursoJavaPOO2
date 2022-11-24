@@ -48,7 +48,7 @@ public class Medicamento {
         this.tipo = tipo;
     }
 
-    public int getQuantidade(TipoRemedioEnum analgesico) {
+    public int getQuantidade() {
         return quantidade;
     }
 

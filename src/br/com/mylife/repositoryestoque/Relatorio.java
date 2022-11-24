@@ -13,7 +13,7 @@ public class Relatorio <T>{
 
     }
 
-    public void criaRelatorioTotal(List<T> lista){
+    public void criaRelatorioTotal(List<MedicamentosRepository> medRepository){
 
     }
 }
