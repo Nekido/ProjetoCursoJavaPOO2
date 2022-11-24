@@ -13,8 +13,8 @@ public class RotinaDiaria {
     public static void main(String[] args) {
 
 
-     Relatorio<MedicamentosRepository> relatorio = new Relatorio<>();
-     relatorio.criaRelatorioTotal(Antibioticos);
+//     Relatorio<MedicamentosRepository> relatorio = new Relatorio<>();
+//     relatorio.criaRelatorioTotal(Antibioticos);
 
 
 

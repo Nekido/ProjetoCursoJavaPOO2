@@ -1,28 +1,32 @@
 package br.com.mylife.farmacia;
 
-public class Antibioticos extends Medicamento {
+public class Antibioticos extends Medicamento implements Aplicacao{
 
-    private boolean injetavel;
+    private String administracao= "injetavel";
 
-    public Antibioticos(String nome, String validade, TipoRemedioEnum tipo, String indicacao, Integer quantidade, String laboratorio, boolean injetavel) {
+    public Antibioticos(String nome, String validade, TipoRemedioEnum tipo, String indicacao,
+                        Integer quantidade, String laboratorio, String injetavel) {
         super(nome, validade, tipo, indicacao, quantidade, laboratorio);
-        this.injetavel = injetavel;
+        this.administracao = administracao;
     }
 
-    public boolean isInjetavel() {
-        return injetavel;
+    public String getInjetavel() {
+        return administracao;
     }
 
-    public void setInjetavel(boolean injetavel) {
-        this.injetavel = injetavel;
+    public void setAdministracao(String injetavel) {
+        this.administracao = injetavel;
     }
 
     @Override
     public String toString() {
         return super.toString() +"Antibioticos{" +
-                "injetavel=" + injetavel +
+                "injetavel=" + administracao +
                 '}';
     }
 
-
+    @Override
+    public void aplicacao() {
+        System.out.println("Este medicamento é " + administracao);
+    }
 }

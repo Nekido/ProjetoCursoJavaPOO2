@@ -1,34 +1,35 @@
 package br.com.mylife.farmacia;
 
-public class AntiInflamatorios extends Medicamento implements Estocavel{
+public class AntiInflamatorios extends Medicamento implements Aplicacao{
 
-  private boolean viaOral;
+  private String administracao= "viaOral";
 
 
   public AntiInflamatorios(String nome, String validade, TipoRemedioEnum tipo, String indicacao, Integer quantidade,
-                           String laboratorio, boolean viaOral) {
+                           String laboratorio, String administracao) {
     super(nome, validade, tipo, indicacao, quantidade, laboratorio);
-    this.viaOral = viaOral;
+    this.administracao = administracao;
   }
 
-  public boolean isViaOral() {
-    return viaOral;
+  public String getAdministracao() {
+    return administracao;
   }
 
-  public void setViaOral(boolean viaOral) {
-    this.viaOral = viaOral;
+  public void setAdministracao
+          (String viaOral) {
+    this.administracao = viaOral;
   }
 
   @Override
   public String toString() {
     return super.toString() +"AntiInflamatorios{" +
-            "viaOral=" + viaOral +
+            "viaOral=" + administracao +
             '}';
   }
 
   @Override
-  public void cadastro() {
-    Estocavel.super.cadastro();
+  public void aplicacao() {
+    System.out.println("Este medicamento é " + administracao);
   }
 }
 
