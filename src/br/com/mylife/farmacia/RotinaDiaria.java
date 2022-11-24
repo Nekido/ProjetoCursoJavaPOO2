@@ -4,8 +4,8 @@ package br.com.mylife.farmacia;
 import br.com.mylife.repositoryestoque.MedicamentosRepository;
 import br.com.mylife.repositoryestoque.Relatorio;
 
+import java.awt.*;
 import java.util.ArrayList;
-import java.util.List;
 
 import static br.com.mylife.farmacia.TipoRemedioEnum.ANTITERMICO;
 
